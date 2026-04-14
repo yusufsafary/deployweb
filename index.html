@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://deploypage.web.id">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --red: #ee2737;
@@ -24,7 +24,7 @@
     --muted: #888;
     --white: #ffffff;
     --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,6 +38,9 @@
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* ─── NOISE OVERLAY ─── */
@@ -174,9 +177,9 @@
 
   h1 {
     font-family: var(--font-head);
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2.2rem, 8vw, 5.5rem);
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.08;
     letter-spacing: -0.02em;
     max-width: 800px;
     animation: fadeUp 0.6s 0.1s ease both;
@@ -193,7 +196,8 @@
     color: var(--muted);
     max-width: 520px;
     margin: 1.5rem auto 0;
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 1.7;
     animation: fadeUp 0.6s 0.2s ease both;
   }
 
@@ -557,9 +561,9 @@
 
   .section-title {
     font-family: var(--font-head);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.75rem, 4vw, 3rem);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.12;
     letter-spacing: -0.02em;
     max-width: 600px;
   }
@@ -567,7 +571,7 @@
   .section-sub {
     color: var(--muted);
     font-size: 1.05rem;
-    font-weight: 300;
+    font-weight: 400;
     max-width: 500px;
     margin-top: 12px;
   }
@@ -725,7 +729,7 @@
 
   .step-content {}
   .step-title { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; margin-bottom: 6px; }
-  .step-desc { color: var(--muted); font-size: 0.9rem; font-weight: 300; }
+  .step-desc { color: var(--muted); font-size: 0.9rem; font-weight: 400; }
 
   .how-visual {
     background: var(--bg3);
@@ -844,8 +848,8 @@
   .feature-desc {
     color: var(--muted);
     font-size: 0.875rem;
-    line-height: 1.6;
-    font-weight: 300;
+    line-height: 1.65;
+    font-weight: 400;
   }
 
   /* ─── TEMPLATES SHOWCASE ─── */
@@ -1275,9 +1279,39 @@
 
     .edit-row { grid-template-columns: 1fr; }
 
-    footer { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; align-items: flex-start; gap: 24px; }
+
+    .footer-orynth { margin-top: 4px; }
 
     .examples-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Mobile typography overrides */
+    h1 {
+      font-size: clamp(2rem, 10vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 7vw, 2.2rem);
+      line-height: 1.15;
+    }
+
+    .cta-band-title {
+      font-size: clamp(1.75rem, 7vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .step-title { font-size: 1rem; }
+    .step-desc { font-size: 0.875rem; }
+
+    .stat-num { font-size: 1.8rem; }
   }
 
   @media (max-width: 480px) {
@@ -1632,8 +1666,8 @@
       <span class="section-eyebrow">About DeployPage</span>
       <h2 class="section-title">Built for people who move fast</h2>
       <p class="section-sub" style="margin-bottom:24px;">DeployPage was born from a simple frustration: why does it take days to get a personal website online?</p>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;font-weight:300;">We believe every person with an X presence deserves a home on the web. Not a generic link-in-bio, not a bloated website builder — a real, beautiful, opinionated landing page that actually represents who they are.</p>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;font-weight:300;margin-top:12px;">Powered by Claude AI, deployed to the open web. Free, forever. No signup. No bullshit.</p>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;font-weight:400;">We believe every person with an X presence deserves a home on the web. Not a generic link-in-bio, not a bloated website builder — a real, beautiful, opinionated landing page that actually represents who they are.</p>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.8;font-weight:400;margin-top:12px;">Powered by Claude AI, deployed to the open web. Free, forever. No signup. No bullshit.</p>
     </div>
     <div class="about-stats reveal">
       <div class="stat-card">
@@ -1672,6 +1706,15 @@
     <a href="#features">Features</a>
     <a href="#templates">Templates</a>
     <a href="#about">About</a>
+    <a href="https://x.com/deployxpage" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.824L1.254 2.25H8.08l4.259 5.629L18.244 2.25zM17.083 19.77h1.833L7.084 4.126H5.117z"/></svg>
+      @deployxpage
+    </a>
+  </div>
+  <div class="footer-orynth" style="display:flex;align-items:center;">
+    <a href="https://orynth.dev/projects/depx" target="_blank" rel="noopener">
+      <img src="https://orynth.dev/api/badge/depx?theme=dark&style=default" alt="Featured on Orynth" width="180" height="55" style="display:block;opacity:0.85;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'" />
+    </a>
   </div>
   <div class="footer-copy">
     © 2025 DeployPage.web.id · Powered by Claude AI · Built for verified X users everywhere
