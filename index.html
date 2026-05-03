@@ -16,11 +16,11 @@
     --red: #e8341a;
     --red-dark: #c4290f;
     --red-glow: rgba(232,52,26,0.15);
-    --bg: #080808;
-    --bg2: #0f0f0f;
-    --bg3: #161616;
-    --border: rgba(255,255,255,0.06);
-    --border-strong: rgba(255,255,255,0.12);
+    --bg: #000000;
+    --bg2: #0a0a0a;
+    --bg3: #111111;
+    --border: rgba(255,255,255,0.15);
+    --border-strong: rgba(255,255,255,0.3);
     --text: #ebebeb;
     --muted: #666;
     --muted2: #444;
@@ -65,9 +65,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(8,8,8,0.9);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
+    background: #000;
+    
+    border-bottom: 2px solid var(--red);
   }
 
   .nav-logo {
@@ -126,7 +126,7 @@
     background: var(--red) !important;
     color: white !important;
     padding: 7px 18px !important;
-    border-radius: 4px !important;
+    border-radius: 0 !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.06em !important;
@@ -173,7 +173,7 @@
     position: absolute;
     width: 700px;
     height: 700px;
-    border-radius: 50%;
+    border-radius: 0;
     background: radial-gradient(circle, rgba(232,52,26,0.08) 0%, transparent 65%);
     top: 50%;
     left: 50%;
@@ -195,14 +195,14 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 6px 14px;
-    border-radius: 3px;
+    border-radius: 0;
     margin-bottom: 2.5rem;
     animation: fadeUp 0.5s ease both;
   }
 
   .sol-dot {
     width: 8px; height: 8px;
-    border-radius: 50%;
+    border-radius: 0;
     background: linear-gradient(135deg, var(--sol), var(--sol2));
     flex-shrink: 0;
   }
@@ -239,7 +239,7 @@
   .generator-box {
     background: var(--bg2);
     border: 1px solid var(--border-strong);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 28px;
     width: 100%;
     max-width: 560px;
@@ -254,7 +254,7 @@
     top: 0; left: 0; right: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--red), transparent);
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
   }
 
   .input-row {
@@ -267,7 +267,7 @@
     flex: 1;
     background: var(--bg3);
     border: 1px solid var(--border-strong);
-    border-radius: 5px;
+    border-radius: 0;
     padding: 13px 16px;
     color: var(--white);
     font-family: var(--font-mono);
@@ -283,7 +283,7 @@
     background: var(--red);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
     padding: 13px 22px;
     font-family: var(--font-display);
     font-size: 1.1rem;
@@ -322,7 +322,7 @@
   .template-card {
     background: var(--bg3);
     border: 1px solid var(--border);
-    border-radius: 5px;
+    border-radius: 0;
     padding: 10px 6px;
     cursor: pointer;
     text-align: center;
@@ -349,7 +349,7 @@
     padding: 11px 14px;
     background: rgba(255,215,0,0.03);
     border: 1px solid rgba(255,215,0,0.1);
-    border-radius: 5px;
+    border-radius: 0;
     cursor: pointer;
     user-select: none;
   }
@@ -359,7 +359,7 @@
   .toggle-switch {
     width: 36px; height: 20px;
     background: var(--bg3);
-    border-radius: 10px;
+    border-radius: 0;
     position: relative;
     transition: background 0.2s;
     flex-shrink: 0;
@@ -371,7 +371,7 @@
     position: absolute;
     width: 14px; height: 14px;
     background: var(--muted);
-    border-radius: 50%;
+    border-radius: 0;
     top: 2px; left: 2px;
     transition: transform 0.2s, background 0.2s;
   }
@@ -391,7 +391,7 @@
   .verified-label .check-icon {
     width: 17px; height: 17px;
     background: #1d9bf0;
-    border-radius: 50%;
+    border-radius: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -438,7 +438,7 @@
     border: 1px solid var(--border-strong);
     color: var(--text);
     padding: 8px 14px;
-    border-radius: 4px;
+    border-radius: 0;
     font-size: 0.75rem;
     font-weight: 600;
     font-family: var(--font-mono);
@@ -464,7 +464,7 @@
   .preview-frame-wrap {
     background: var(--bg2);
     border: 1px solid var(--border-strong);
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
     margin-bottom: 14px;
   }
@@ -479,7 +479,7 @@
   }
 
   .dot-red, .dot-yellow, .dot-green {
-    width: 10px; height: 10px; border-radius: 50%;
+    width: 10px; height: 10px; border-radius: 0;
   }
   .dot-red { background: #ff5f57; }
   .dot-yellow { background: #ffbd2e; }
@@ -488,7 +488,7 @@
   .preview-url {
     flex: 1;
     background: var(--bg2);
-    border-radius: 4px;
+    border-radius: 0;
     padding: 4px 12px;
     font-size: 0.7rem;
     color: var(--muted);
@@ -513,7 +513,7 @@
   .edit-field {
     background: var(--bg3);
     border: 1px solid var(--border-strong);
-    border-radius: 4px;
+    border-radius: 0;
     padding: 10px 14px;
     color: var(--white);
     font-family: var(--font-body);
@@ -544,7 +544,7 @@
 
   .btn-share {
     padding: 7px 12px;
-    border-radius: 4px;
+    border-radius: 0;
     border: 1px solid var(--border-strong);
     font-size: 0.75rem;
     font-weight: 600;
@@ -568,7 +568,7 @@
     width: 16px; height: 16px;
     border: 2px solid rgba(255,255,255,0.3);
     border-top-color: white;
-    border-radius: 50%;
+    border-radius: 0;
     animation: spin 0.7s linear infinite;
   }
 
@@ -633,7 +633,7 @@
   .example-card {
     background: var(--bg2);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 0;
     overflow: hidden;
     transition: transform 0.25s, border-color 0.25s;
     cursor: pointer;
@@ -655,7 +655,7 @@
     position: absolute;
     top: 8px; right: 8px;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(8px);
+    
     color: var(--text);
     font-size: 0.6rem;
     font-weight: 700;
@@ -663,7 +663,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 4px 8px;
-    border-radius: 3px;
+    border-radius: 0;
     border: 1px solid var(--border);
   }
 
@@ -677,7 +677,7 @@
 
   .example-avatar {
     width: 36px; height: 36px;
-    border-radius: 50%;
+    border-radius: 0;
     background: var(--bg3);
     border: 1px solid var(--border-strong);
     display: flex;
@@ -694,7 +694,7 @@
   .verified-check {
     width: 14px; height: 14px;
     background: #1d9bf0;
-    border-radius: 50%;
+    border-radius: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -741,7 +741,7 @@
     font-family: var(--font-display);
     font-size: 3rem;
     font-weight: 400;
-    color: rgba(232,52,26,0.12);
+    color: rgba(232,52,26,0.2);
     line-height: 1;
     min-width: 48px;
     letter-spacing: 0.02em;
@@ -756,7 +756,7 @@
   .how-visual {
     background: var(--bg3);
     border: 1px solid var(--border-strong);
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
     aspect-ratio: 3/4;
     display: flex;
@@ -793,7 +793,7 @@
   .mock-profile-card {
     background: var(--bg2);
     border: 1px solid var(--border-strong);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 20px;
     width: 100%;
     text-align: center;
@@ -801,7 +801,7 @@
 
   .mock-avatar {
     width: 58px; height: 58px;
-    border-radius: 50%;
+    border-radius: 0;
     background: linear-gradient(135deg, var(--red), #ff6b6b);
     margin: 0 auto 10px;
     display: flex;
@@ -819,7 +819,7 @@
     color: white;
     border: none;
     padding: 9px 20px;
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 700;
     font-size: 0.8rem;
     font-family: var(--font-display);
@@ -849,7 +849,7 @@
   .feature-card {
     background: var(--bg2);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 0;
     padding: 26px;
     transition: border-color 0.2s, transform 0.2s;
   }
@@ -891,7 +891,7 @@
   }
 
   .template-showcase-card {
-    border-radius: 6px;
+    border-radius: 0;
     overflow: hidden;
     border: 1px solid var(--border);
     transition: border-color 0.25s, transform 0.25s;
@@ -925,7 +925,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 3px 8px;
-    border-radius: 3px;
+    border-radius: 0;
     border: 1px solid currentColor;
     opacity: 0.7;
   }
@@ -939,7 +939,7 @@
 
   .tsb-avatar {
     width: 44px; height: 44px;
-    border-radius: 50%;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -991,7 +991,7 @@
   .stat-card {
     background: var(--bg2);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 0;
     padding: 22px;
     text-align: center;
   }
@@ -1061,7 +1061,7 @@
     color: var(--red);
     border: none;
     padding: 14px 36px;
-    border-radius: 4px;
+    border-radius: 0;
     font-family: var(--font-display);
     font-size: 1.2rem;
     letter-spacing: 0.08em;
@@ -1150,7 +1150,7 @@
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -1169,7 +1169,7 @@
   .modal {
     background: var(--bg2);
     border: 1px solid var(--border-strong);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 28px;
     max-width: 480px;
     width: 100%;
@@ -1199,7 +1199,7 @@
     font-size: 1rem;
     cursor: pointer;
     padding: 6px;
-    border-radius: 4px;
+    border-radius: 0;
     transition: color 0.2s;
   }
 
@@ -1213,7 +1213,7 @@
     align-items: flex-start;
     padding: 12px;
     background: var(--bg3);
-    border-radius: 5px;
+    border-radius: 0;
     border: 1px solid var(--border);
   }
 
@@ -1233,7 +1233,7 @@
     border: 1px solid var(--border-strong);
     color: var(--text);
     padding: 7px 12px;
-    border-radius: 4px;
+    border-radius: 0;
     font-size: 0.75rem;
     font-family: var(--font-mono);
     font-weight: 600;
@@ -1255,7 +1255,7 @@
     border: 1px solid var(--border-strong);
     color: var(--text);
     padding: 10px 18px;
-    border-radius: 5px;
+    border-radius: 0;
     font-size: 0.8rem;
     font-family: var(--font-mono);
     z-index: 9000;
@@ -1299,7 +1299,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 0;
     text-decoration: none;
     transition: border-color 0.2s;
   }
@@ -1307,7 +1307,7 @@
   .sol-badge:hover { border-color: rgba(153,69,255,0.5); }
   .sol-badge-dot {
     width: 6px; height: 6px;
-    border-radius: 50%;
+    border-radius: 0;
     background: linear-gradient(135deg, #9945FF, #14F195);
     flex-shrink: 0;
   }
@@ -1454,7 +1454,7 @@
   </div>
 
   <!-- Edit fields -->
-  <div style="background:var(--bg2);border:1px solid var(--border-strong);border-radius:6px;padding:14px;margin-bottom:10px;" id="editSection">
+  <div style="background:var(--bg2);border:1px solid var(--border-strong);border-radius: 0;padding:14px;margin-bottom:10px;" id="editSection">
     <p style="font-size:0.65rem;color:var(--muted);margin-bottom:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;font-family:var(--font-mono);">// Quick Edit Before Download</p>
     <div class="edit-row">
       <input type="text" class="edit-field" id="editName" placeholder="Full Name" oninput="scheduleRegenPreview()">
@@ -1743,9 +1743,9 @@
     <a href="#features">Features</a>
     <a href="#templates">Templates</a>
     <a href="#about">About</a>
-    <a href="https://x.com/deployxpage" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;">
+    <a href="https://x.com/0xsixtina" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.824L1.254 2.25H8.08l4.259 5.629L18.244 2.25zM17.083 19.77h1.833L7.084 4.126H5.117z"/></svg>
-      @deployxpage
+      @0xsixtina
     </a>
   </div>
   <div style="display:flex;align-items:center;">
@@ -2017,8 +2017,8 @@ function downloadHTML() {
 
 function shareOnX(e) {
   e.preventDefault();
-  const text = `Just generated my personal landing page with @DeployPage! 🚀\n\nTry it free at deploypage.web.id`;
-  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+  const text = `Just generated my personal landing page! Check out @0xsixtina 🚀\n\nTry it free at deploypage.web.id`;
+  window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 function shareOnWA(e) {
